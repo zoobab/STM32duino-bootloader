@@ -365,9 +365,10 @@
 #define STARTUP_BLINKS 5
 #ifndef BOOTLOADER_WAIT
 #ifdef BUTTON_BANK
-    #define BOOTLOADER_WAIT 6
+// extend the bootloader wait time to 10secs, value seems to be a multiple of 4? (10x4=40)
+    #define BOOTLOADER_WAIT 40
 #else
-    #define BOOTLOADER_WAIT 30
+    #define BOOTLOADER_WAIT 40
 #endif
 #endif
 
